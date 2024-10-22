@@ -2,7 +2,7 @@
 |Description |Add Disqus threads (comments) to your tiddlers|
 |Source      |https://github.com/YakovL/TiddlyWiki_DisqusPlugin/blob/master/DisqusPlugin.js|
 |Author      |Yakov Litvin|
-|Version     |0.3.0|
+|Version     |0.3.1|
 |License     |[[MIT|https://github.com/YakovL/TiddlyWiki_YL_ExtensionsCollection/blob/master/Common%20License%20(MIT)]]|
 ***/
 //{{{
@@ -59,8 +59,7 @@ config.macros.disqus = {
         // TODO: deduce default from tiddler.title instead
         const threadId = getParam(pParams, "thread", "")
         // used for permalinking purposes, also known as disqus_url
-        // TODO: deduce default from tiddler.title and TW permalink functionality
-        const url = getParam(pParams, "url", "")
+        const url = getParam(pParams, "url", tiddler.title && story.getPermalink ? story.getPermalink(tiddler.title) : "")
 
         this.mountThread(place, false, forumShortname, threadId, url)
     }

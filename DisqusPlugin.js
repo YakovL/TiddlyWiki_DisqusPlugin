@@ -1,4 +1,5 @@
 /***
+|Description |Add Disqus threads (comments) to your tiddlers|
 |Source      |https://github.com/YakovL/TiddlyWiki_DisqusPlugin/blob/master/DisqusPlugin.js|
 |Author      |Yakov Litvin|
 |Version     |0.3.0|

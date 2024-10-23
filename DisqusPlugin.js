@@ -4,6 +4,12 @@
 |Author      |Yakov Litvin|
 |Version     |0.3.1|
 |License     |[[MIT|https://github.com/YakovL/TiddlyWiki_YL_ExtensionsCollection/blob/master/Common%20License%20(MIT)]]|
+!!!Usage
+Basic usage involves the {{{<<discuss>>}}} macro. Once you have a Disqus account and hence the name of your forum, you can put
+{{{
+<<discuss forum:"your forum disqus_shortname" thread:"your thread disqus_identifier">>
+}}}
+anywhere in your tiddler and it will display a corresponding thread (use different ids where you need different threads).
 ***/
 //{{{
 config.macros.disqus = {
@@ -45,7 +51,7 @@ config.macros.disqus = {
             loaderScript.id = loaderScriptId
             loaderScript.setAttribute('data-timestamp', +new Date())
             ;(document.head || document.body).appendChild(loaderScript)
-        })()		
+        })()
     },
     handler: function(place, macroName, params, wikifier, paramString, tiddler) {
         const isLocal = window.isLocal || function() { return (document.location.protocol == "file:") }

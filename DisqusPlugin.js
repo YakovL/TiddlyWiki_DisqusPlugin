@@ -1,5 +1,6 @@
 /***
 |Description |Add Disqus threads (comments) to your tiddlers|
+|Demo        |https://yakovl.github.io/TiddlyWiki_DisqusPlugin/|
 |Source      |https://github.com/YakovL/TiddlyWiki_DisqusPlugin/blob/master/DisqusPlugin.js|
 |Author      |Yakov Litvin|
 |Version     |0.3.1|
@@ -10,6 +11,8 @@ Basic usage involves the {{{<<discuss>>}}} macro. Once you have a Disqus account
 <<discuss forum:"your forum disqus_shortname" thread:"your thread disqus_identifier">>
 }}}
 anywhere in your tiddler and it will display a corresponding thread (use different ids where you need different threads).
+Try it here:
+<<disqus forum:"ylprojects" thread:"DisqusPlugin demo">>
 ***/
 //{{{
 config.macros.disqus = {
